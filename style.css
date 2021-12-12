@@ -5,11 +5,16 @@
     --sea-colour: #4eb8d3;
     --mountain-colour: #4d4941;
     --hills-colour: #739c5f;
+    --link-colour: #0300b3;
+    --light-link-colour: #7a78fb;
+    --text-color: #000;
 
     --transition-height: 80px;
 
-    --font-large: 4rem;
     --font-small: 0.875rem;
+    --font-regular: 1.05rem;
+    --font-medium: 1.15rem;
+    --font-large: 4rem;
 }
 
 html,
@@ -22,6 +27,13 @@ body {
     z-index: -10;
     font-family: 'Dosis', sans-serif;
     font-weight: 500;
+    font-size: var(--font-regular);
+    letter-spacing: 0.025rem;
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-colour);
 }
 
 main {
@@ -37,6 +49,7 @@ main {
 #title-area {
     margin-bottom: 2rem;
     text-align: center;
+    animation: slide-down 1000ms ease-in-out forwards;
 }
 
 #title {
@@ -61,6 +74,25 @@ main {
     margin-top: 0.4rem;
     text-align: right;
     font-weight: 300;
+}
+
+#testimonial-collection {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 75px;
+}
+
+.testimonial {
+    text-align: center;
+    font-size: var(--font-medium);
+}
+
+.testimonial:not(:last-child) {
+    margin-right: 20px;
+}
+
+.testimonial-author {
+    font-weight: 600;
 }
 
 #tribute-content {
@@ -143,6 +175,10 @@ footer {
     font-size: var(--font-small);
 }
 
+footer a {
+    color: var(--light-link-colour);
+}
+
 .transition {
     position: absolute;
     top: -80px;
@@ -170,5 +206,22 @@ footer {
 
     #title {
         margin-top: 0.8rem;
+    }
+
+    #testimonial-collection {
+        flex-direction: column;
+    }
+
+    .testimonial:not(:last-child) {
+        margin-right: 0px;
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-400px);
+    }
+    100% {
+        transform: initial;
     }
 }
