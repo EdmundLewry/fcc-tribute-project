@@ -1,0 +1,174 @@
+:root {
+    --footer-colour: #000;
+    --footer-text-colour: #fff;
+    --sky-colour: #97dff5;
+    --sea-colour: #4eb8d3;
+    --mountain-colour: #4d4941;
+    --hills-colour: #739c5f;
+
+    --transition-height: 80px;
+
+    --font-large: 4rem;
+    --font-small: 0.875rem;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--sky-colour);
+    position: relative;
+    z-index: -10;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 500;
+}
+
+main {
+    position: relative;
+}
+
+.container {
+    padding: 20px;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+#title-area {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#title {
+    font-family: 'Oleo Script', cursive;
+    font-size: var(--font-large);
+    margin-bottom: 0rem;
+    line-height: 3.5rem;
+}
+
+#img-div {
+    width: 50%;
+    min-width: 280px;
+}
+
+#image {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#img-caption {
+    margin-top: 0.4rem;
+    text-align: right;
+    font-weight: 300;
+}
+
+#tribute-content {
+    position: relative;
+    background-color: var(--sea-colour);
+    padding-bottom: var(--transition-height);
+    margin-top: 25rem;
+}
+
+.mountains {
+    position: absolute;
+    top: -400px;
+    left: -100px;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -2;
+}
+
+.mountains svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 500px;
+}
+
+.mountains .shape-fill {
+    fill: var(--mountain-colour);
+}
+
+.hills {
+    position: absolute;
+    top: -200px;
+    left: 0px;
+    width: 85%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -2;
+}
+
+.hills svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 200px;
+}
+
+.hills .shape-fill {
+    fill: var(--hills-colour);
+}
+
+.wave {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 45px;
+}
+
+.wave .shape-fill {
+    fill: var(--sea-colour);
+}
+
+footer {
+    background-color: var(--footer-colour);
+    color: var(--footer-text-colour);
+    position: relative;
+    font-size: var(--font-small);
+}
+
+.transition {
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.transition svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: var(--transition-height);
+}
+
+.transition .shape-fill {
+    fill: var(--footer-colour);
+}
+
+@media (max-width: 500px) {
+    #title-area {
+        margin-bottom: 0rem;
+    }   
+
+    #title {
+        margin-top: 0.8rem;
+    }
+}
